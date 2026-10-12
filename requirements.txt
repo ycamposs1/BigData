@@ -1,0 +1,10 @@
+# Versiones fijadas para que coincidan con el entorno del curso (Spark 3.5.1 en /opt).
+# Instalar con el entorno virtual activado:  pip install -r requirements.txt
+pyspark==3.5.1        # API de Python de Spark; DEBE ser la misma versión que /opt/spark-3.5.1-bin-hadoop3
+findspark==2.0.1      # enlaza Jupyter con el Spark instalado en /opt
+numpy==1.26.4         # requerido por Spark MLlib; la serie 2.x no es compatible con PySpark 3.5.1
+pandas==2.2.3         # lectura de los XLSX y reportes pequeños (no se usa para procesar el volumen)
+openpyxl==3.1.5       # motor de pandas para .xlsx
+requests==2.32.3      # descarga de NASA POWER vía API REST
+matplotlib==3.9.2     # gráficos del análisis exploratorio
+jupyterlab==4.2.5     # entorno de desarrollo de los notebooks
