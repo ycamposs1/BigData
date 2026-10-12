@@ -1,0 +1,154 @@
+26/10/11 23:16:21 WARN Utils: Your hostname, fxrnando resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface enp0s3)
+26/10/11 23:16:21 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/10/11 23:16:22 INFO SparkContext: Running Spark version 3.5.1
+26/10/11 23:16:22 INFO SparkContext: OS info Linux, 6.1.0-52-amd64, amd64
+26/10/11 23:16:22 INFO SparkContext: Java version 17.0.20.1
+26/10/11 23:16:22 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/11 23:16:23 INFO ResourceUtils: ==============================================================
+26/10/11 23:16:23 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/11 23:16:23 INFO ResourceUtils: ==============================================================
+26/10/11 23:16:23 INFO SparkContext: Submitted application: job2_silver_a_gold
+26/10/11 23:16:23 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/11 23:16:23 INFO ResourceProfile: Limiting resource is cpu
+26/10/11 23:16:23 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/11 23:16:23 INFO SecurityManager: Changing view acls to: fcam06
+26/10/11 23:16:23 INFO SecurityManager: Changing modify acls to: fcam06
+26/10/11 23:16:23 INFO SecurityManager: Changing view acls groups to: 
+26/10/11 23:16:23 INFO SecurityManager: Changing modify acls groups to: 
+26/10/11 23:16:23 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: fcam06; groups with view permissions: EMPTY; users with modify permissions: fcam06; groups with modify permissions: EMPTY
+26/10/11 23:16:23 INFO Utils: Successfully started service 'sparkDriver' on port 40575.
+26/10/11 23:16:23 INFO SparkEnv: Registering MapOutputTracker
+26/10/11 23:16:24 INFO SparkEnv: Registering BlockManagerMaster
+26/10/11 23:16:24 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/11 23:16:24 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/11 23:16:24 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/11 23:16:24 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-f486f7bb-0ce8-41e8-af5b-6bc1c9ea7b7d
+26/10/11 23:16:24 INFO MemoryStore: MemoryStore started with capacity 1663.2 MiB
+26/10/11 23:16:24 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/11 23:16:24 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/11 23:16:24 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/11 23:16:24 INFO Executor: Starting executor ID driver on host 10.0.2.15
+26/10/11 23:16:24 INFO Executor: OS info Linux, 6.1.0-52-amd64, amd64
+26/10/11 23:16:24 INFO Executor: Java version 17.0.20.1
+26/10/11 23:16:24 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/10/11 23:16:24 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@797cd6ba for default.
+26/10/11 23:16:24 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 45975.
+26/10/11 23:16:24 INFO NettyBlockTransferService: Server created on 10.0.2.15:45975
+26/10/11 23:16:24 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/11 23:16:24 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.0.2.15, 45975, None)
+26/10/11 23:16:24 INFO BlockManagerMasterEndpoint: Registering block manager 10.0.2.15:45975 with 1663.2 MiB RAM, BlockManagerId(driver, 10.0.2.15, 45975, None)
+26/10/11 23:16:24 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.0.2.15, 45975, None)
+26/10/11 23:16:24 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.0.2.15, 45975, None)
+   [R8] DIARIO: días-estación sin promedio válido de PM2.5 (< 18 h) -> 14585 de 30565 (47.718 %)
+   escrito: hdfs://localhost:9000/datalake/gold/features_diarias
+   /home/fcam06/BigData_UPAO/BigData/evidencias/reporte_positivos.csv
+   /home/fcam06/BigData_UPAO/BigData/evidencias/linea_base_persistencia_prueba.csv
+   reporte de calidad: /home/fcam06/BigData_UPAO/BigData/evidencias/reporte_calidad_job2.csv
++-----------------------+----+--------------+------------+---------------+----------+
+|estacion               |anio|dias_con_datos|dias_validos|dias_supera_eca|pct_supera|
++-----------------------+----+--------------+------------+---------------+----------+
+|CAMPO_DE_MARTE         |2010|153           |0           |NULL           |NULL      |
+|CAMPO_DE_MARTE         |2011|365           |0           |NULL           |NULL      |
+|CAMPO_DE_MARTE         |2012|366           |0           |NULL           |NULL      |
+|CAMPO_DE_MARTE         |2013|365           |0           |NULL           |NULL      |
+|CAMPO_DE_MARTE         |2014|365           |59          |0              |0.0       |
+|CAMPO_DE_MARTE         |2015|365           |299         |0              |0.0       |
+|CAMPO_DE_MARTE         |2016|366           |252         |0              |0.0       |
+|CAMPO_DE_MARTE         |2017|365           |275         |0              |0.0       |
+|CAMPO_DE_MARTE         |2018|365           |305         |1              |0.33      |
+|CAMPO_DE_MARTE         |2019|365           |340         |2              |0.59      |
+|CAMPO_DE_MARTE         |2020|366           |280         |0              |0.0       |
+|CAMPO_DE_MARTE         |2021|365           |159         |0              |0.0       |
+|CAMPO_DE_MARTE         |2022|365           |286         |0              |0.0       |
+|CAMPO_DE_MARTE         |2023|365           |89          |0              |0.0       |
+|CAMPO_DE_MARTE         |2024|152           |146         |2              |1.37      |
+|CARABAYLLO             |2014|275           |251         |6              |2.39      |
+|CARABAYLLO             |2015|365           |312         |2              |0.64      |
+|CARABAYLLO             |2016|366           |268         |11             |4.1       |
+|CARABAYLLO             |2017|365           |0           |NULL           |NULL      |
+|CARABAYLLO             |2018|365           |212         |0              |0.0       |
+|CARABAYLLO             |2019|365           |46          |7              |15.22     |
+|CARABAYLLO             |2020|366           |245         |1              |0.41      |
+|CARABAYLLO             |2021|365           |84          |3              |3.57      |
+|CARABAYLLO             |2022|365           |306         |62             |20.26     |
+|CARABAYLLO             |2023|365           |352         |5              |1.42      |
+|CARABAYLLO             |2024|152           |59          |4              |6.78      |
+|SANTA_ANITA            |2011|201           |0           |NULL           |NULL      |
+|SANTA_ANITA            |2012|366           |0           |NULL           |NULL      |
+|SANTA_ANITA            |2013|365           |0           |NULL           |NULL      |
+|SANTA_ANITA            |2014|365           |31          |0              |0.0       |
+|SANTA_ANITA            |2015|365           |341         |2              |0.59      |
+|SANTA_ANITA            |2016|366           |295         |18             |6.1       |
+|SANTA_ANITA            |2017|365           |342         |12             |3.51      |
+|SANTA_ANITA            |2018|365           |182         |7              |3.85      |
+|SANTA_ANITA            |2019|365           |72          |5              |6.94      |
+|SANTA_ANITA            |2020|366           |0           |NULL           |NULL      |
+|SANTA_ANITA            |2021|365           |11          |0              |0.0       |
+|SANTA_ANITA            |2022|365           |330         |83             |25.15     |
+|SANTA_ANITA            |2023|365           |344         |0              |0.0       |
+|SANTA_ANITA            |2024|152           |146         |3              |2.05      |
+|SAN_BORJA              |2010|214           |0           |NULL           |NULL      |
+|SAN_BORJA              |2011|365           |0           |NULL           |NULL      |
+|SAN_BORJA              |2012|366           |0           |NULL           |NULL      |
+|SAN_BORJA              |2013|365           |0           |NULL           |NULL      |
+|SAN_BORJA              |2014|365           |92          |0              |0.0       |
+|SAN_BORJA              |2015|365           |301         |0              |0.0       |
+|SAN_BORJA              |2016|366           |270         |1              |0.37      |
+|SAN_BORJA              |2017|365           |313         |0              |0.0       |
+|SAN_BORJA              |2018|365           |275         |1              |0.36      |
+|SAN_BORJA              |2019|365           |123         |0              |0.0       |
+|SAN_BORJA              |2020|366           |171         |0              |0.0       |
+|SAN_BORJA              |2021|365           |82          |3              |3.66      |
+|SAN_BORJA              |2022|365           |329         |14             |4.26      |
+|SAN_BORJA              |2023|365           |268         |0              |0.0       |
+|SAN_BORJA              |2024|152           |142         |2              |1.41      |
+|SAN_JUAN_DE_LURIGANCHO |2014|260           |240         |22             |9.17      |
+|SAN_JUAN_DE_LURIGANCHO |2015|365           |361         |1              |0.28      |
+|SAN_JUAN_DE_LURIGANCHO |2016|366           |270         |25             |9.26      |
+|SAN_JUAN_DE_LURIGANCHO |2017|365           |345         |14             |4.06      |
+|SAN_JUAN_DE_LURIGANCHO |2018|365           |195         |12             |6.15      |
+|SAN_JUAN_DE_LURIGANCHO |2019|365           |169         |21             |12.43     |
+|SAN_JUAN_DE_LURIGANCHO |2020|366           |272         |2              |0.74      |
+|SAN_JUAN_DE_LURIGANCHO |2021|365           |346         |21             |6.07      |
+|SAN_JUAN_DE_LURIGANCHO |2022|365           |354         |94             |26.55     |
+|SAN_JUAN_DE_LURIGANCHO |2023|365           |178         |1              |0.56      |
+|SAN_JUAN_DE_LURIGANCHO |2024|152           |85          |0              |0.0       |
+|SAN_MARTIN_DE_PORRES   |2014|275           |269         |0              |0.0       |
+|SAN_MARTIN_DE_PORRES   |2015|365           |304         |0              |0.0       |
+|SAN_MARTIN_DE_PORRES   |2016|366           |277         |0              |0.0       |
+|SAN_MARTIN_DE_PORRES   |2017|365           |355         |0              |0.0       |
+|SAN_MARTIN_DE_PORRES   |2018|365           |159         |1              |0.63      |
+|SAN_MARTIN_DE_PORRES   |2019|365           |54          |0              |0.0       |
+|SAN_MARTIN_DE_PORRES   |2020|366           |0           |NULL           |NULL      |
+|SAN_MARTIN_DE_PORRES   |2021|365           |25          |0              |0.0       |
+|SAN_MARTIN_DE_PORRES   |2022|365           |353         |5              |1.42      |
+|SAN_MARTIN_DE_PORRES   |2023|365           |245         |2              |0.82      |
+|SAN_MARTIN_DE_PORRES   |2024|152           |85          |1              |1.18      |
+|VILLA_MARIA_DEL_TRIUNFO|2012|366           |0           |NULL           |NULL      |
+|VILLA_MARIA_DEL_TRIUNFO|2013|365           |0           |NULL           |NULL      |
+|VILLA_MARIA_DEL_TRIUNFO|2014|365           |29          |0              |0.0       |
+|VILLA_MARIA_DEL_TRIUNFO|2015|365           |158         |1              |0.63      |
+|VILLA_MARIA_DEL_TRIUNFO|2016|366           |253         |2              |0.79      |
+|VILLA_MARIA_DEL_TRIUNFO|2017|365           |303         |3              |0.99      |
+|VILLA_MARIA_DEL_TRIUNFO|2018|365           |257         |4              |1.56      |
+|VILLA_MARIA_DEL_TRIUNFO|2019|365           |131         |5              |3.82      |
+|VILLA_MARIA_DEL_TRIUNFO|2020|366           |51          |0              |0.0       |
+|VILLA_MARIA_DEL_TRIUNFO|2021|365           |8           |0              |0.0       |
+|VILLA_MARIA_DEL_TRIUNFO|2022|365           |349         |53             |15.19     |
+|VILLA_MARIA_DEL_TRIUNFO|2023|365           |328         |0              |0.0       |
+|VILLA_MARIA_DEL_TRIUNFO|2024|152           |87          |0              |0.0       |
++-----------------------+----+--------------+------------+---------------+----------+
+
++-----------------------+---------------+----------------+--------------------+---------------------+
+|estacion               |dias_evaluables|positivos_prueba|alertas_persistencia|aciertos_persistencia|
++-----------------------+---------------+----------------+--------------------+---------------------+
+|CAMPO_DE_MARTE         |481            |2               |2                   |0                    |
+|CARABAYLLO             |701            |71              |71                  |33                   |
+|SANTA_ANITA            |783            |77              |81                  |45                   |
+|SAN_BORJA              |707            |16              |15                  |5                    |
+|SAN_JUAN_DE_LURIGANCHO |594            |92              |95                  |55                   |
+|SAN_MARTIN_DE_PORRES   |665            |8               |8                   |2                    |
+|VILLA_MARIA_DEL_TRIUNFO|736            |52              |52                  |30                   |
++-----------------------+---------------+----------------+--------------------+---------------------+
+
+== job2_gold: 28.75 s

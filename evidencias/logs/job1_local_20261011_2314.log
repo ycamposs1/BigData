@@ -1,0 +1,123 @@
+26/10/11 23:14:17 WARN Utils: Your hostname, fxrnando resolves to a loopback address: 127.0.1.1; using 10.0.2.15 instead (on interface enp0s3)
+26/10/11 23:14:17 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+26/10/11 23:14:22 INFO SparkContext: Running Spark version 3.5.1
+26/10/11 23:14:22 INFO SparkContext: OS info Linux, 6.1.0-52-amd64, amd64
+26/10/11 23:14:22 INFO SparkContext: Java version 17.0.20.1
+26/10/11 23:14:22 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+26/10/11 23:14:22 INFO ResourceUtils: ==============================================================
+26/10/11 23:14:22 INFO ResourceUtils: No custom resources configured for spark.driver.
+26/10/11 23:14:22 INFO ResourceUtils: ==============================================================
+26/10/11 23:14:22 INFO SparkContext: Submitted application: job1_bronze_a_silver
+26/10/11 23:14:22 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+26/10/11 23:14:22 INFO ResourceProfile: Limiting resource is cpu
+26/10/11 23:14:22 INFO ResourceProfileManager: Added ResourceProfile id: 0
+26/10/11 23:14:23 INFO SecurityManager: Changing view acls to: fcam06
+26/10/11 23:14:23 INFO SecurityManager: Changing modify acls to: fcam06
+26/10/11 23:14:23 INFO SecurityManager: Changing view acls groups to: 
+26/10/11 23:14:23 INFO SecurityManager: Changing modify acls groups to: 
+26/10/11 23:14:23 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: fcam06; groups with view permissions: EMPTY; users with modify permissions: fcam06; groups with modify permissions: EMPTY
+26/10/11 23:14:24 INFO Utils: Successfully started service 'sparkDriver' on port 34573.
+26/10/11 23:14:24 INFO SparkEnv: Registering MapOutputTracker
+26/10/11 23:14:25 INFO SparkEnv: Registering BlockManagerMaster
+26/10/11 23:14:25 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+26/10/11 23:14:25 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+26/10/11 23:14:25 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+26/10/11 23:14:25 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-bef47ab9-4e43-400f-9cbc-a4cda90c21aa
+26/10/11 23:14:25 INFO MemoryStore: MemoryStore started with capacity 1663.2 MiB
+26/10/11 23:14:25 INFO SparkEnv: Registering OutputCommitCoordinator
+26/10/11 23:14:26 INFO JettyUtils: Start Jetty 0.0.0.0:4040 for SparkUI
+26/10/11 23:14:26 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+26/10/11 23:14:26 INFO Executor: Starting executor ID driver on host 10.0.2.15
+26/10/11 23:14:26 INFO Executor: OS info Linux, 6.1.0-52-amd64, amd64
+26/10/11 23:14:26 INFO Executor: Java version 17.0.20.1
+26/10/11 23:14:27 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+26/10/11 23:14:27 INFO Executor: Created or updated repl class loader org.apache.spark.util.MutableURLClassLoader@579ed982 for default.
+26/10/11 23:14:27 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 38315.
+26/10/11 23:14:27 INFO NettyBlockTransferService: Server created on 10.0.2.15:38315
+26/10/11 23:14:27 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+26/10/11 23:14:27 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.0.2.15, 38315, None)
+26/10/11 23:14:27 INFO BlockManagerMasterEndpoint: Registering block manager 10.0.2.15:38315 with 1663.2 MiB RAM, BlockManagerId(driver, 10.0.2.15, 38315, None)
+26/10/11 23:14:27 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.0.2.15, 38315, None)
+26/10/11 23:14:27 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.0.2.15, 38315, None)
+== Fuente A (datos abiertos)
+   [R1] A: fecha-hora inválida o fuera de 2010-01-01..2024-05-31 (filas rechazadas) -> 0 de 577794 (0.0 %)
+   [R0] A: pm10: texto no numérico convertido a nulo -> 0 de 577794 (0.0 %)
+   [R3] A: pm10: valor negativo convertido a nulo -> 0 de 577794 (0.0 %)
+   [COMPLETITUD] A: pm10: horas sin dato en la fuente -> 196812 de 577794 (34.063 %)
+   [R0] A: pm2_5: texto no numérico convertido a nulo -> 0 de 577794 (0.0 %)
+   [R3] A: pm2_5: valor negativo convertido a nulo -> 0 de 577794 (0.0 %)
+   [COMPLETITUD] A: pm2_5: horas sin dato en la fuente -> 210203 de 577794 (36.38 %)
+   [R0] A: no2: texto no numérico convertido a nulo -> 0 de 577794 (0.0 %)
+   [R3] A: no2: valor negativo convertido a nulo -> 0 de 577794 (0.0 %)
+   [COMPLETITUD] A: no2: horas sin dato en la fuente -> 278602 de 577794 (48.218 %)
+   [R2] A: filas duplicadas por estacion+fecha_hora (descartadas) -> 84
+== Fuente B (repositorio)
+   B: HORA va de 0 a 23 (se espera 0 a 23)
+   [R1] B: fecha-hora inválida o fuera de 2010-01-01..2024-05-31 (filas rechazadas) -> 0 de 703056 (0.0 %)
+   [R0] B: pm10: texto no numérico convertido a nulo -> 0 de 703056 (0.0 %)
+   [R3] B: pm10: valor negativo convertido a nulo -> 0 de 703056 (0.0 %)
+   [COMPLETITUD] B: pm10: horas sin dato en la fuente -> 206372 de 703056 (29.354 %)
+   [R0] B: pm2_5: texto no numérico convertido a nulo -> 0 de 703056 (0.0 %)
+   [R3] B: pm2_5: valor negativo convertido a nulo -> 0 de 703056 (0.0 %)
+   [COMPLETITUD] B: pm2_5: horas sin dato en la fuente -> 363084 de 703056 (51.644 %)
+   [R0] B: no2: texto no numérico convertido a nulo -> 0 de 703056 (0.0 %)
+   [R3] B: no2: valor negativo convertido a nulo -> 0 de 703056 (0.0 %)
+   [COMPLETITUD] B: no2: horas sin dato en la fuente -> 351802 de 703056 (50.039 %)
+   [R0] B: so2: texto no numérico convertido a nulo -> 0 de 703056 (0.0 %)
+   [R3] B: so2: valor negativo convertido a nulo -> 0 de 703056 (0.0 %)
+   [COMPLETITUD] B: so2: horas sin dato en la fuente -> 408776 de 703056 (58.143 %)
+   [R0] B: o3: texto no numérico convertido a nulo -> 0 de 703056 (0.0 %)
+   [R3] B: o3: valor negativo convertido a nulo -> 0 de 703056 (0.0 %)
+   [COMPLETITUD] B: o3: horas sin dato en la fuente -> 354354 de 703056 (50.402 %)
+   [R0] B: co: texto no numérico convertido a nulo -> 0 de 703056 (0.0 %)
+   [R3] B: co: valor negativo convertido a nulo -> 0 de 703056 (0.0 %)
+   [COMPLETITUD] B: co: horas sin dato en la fuente -> 381705 de 703056 (54.292 %)
+   [R2] B: filas duplicadas por estacion+fecha_hora (descartadas) -> 9
+   En A y B: ['CAMPO_DE_MARTE', 'CARABAYLLO', 'SANTA_ANITA', 'SAN_BORJA', 'SAN_JUAN_DE_LURIGANCHO', 'SAN_MARTIN_DE_PORRES', 'VILLA_MARIA_DEL_TRIUNFO']
+   Solo en A: []
+   Solo en B: ['ATE', 'HUACHIPA', 'PUENTE_PIEDRA']   <- si alguna es la misma estación escrita distinto, agrégala a ALIAS_ESTACIONES en config.py
+   [R7] A-B: estaciones solo en B, sin coordenadas en A: ['ATE', 'HUACHIPA', 'PUENTE_PIEDRA'] -> 3
+   [R9] A-B: horas del solape con |PM2.5 A - PM2.5 B| > 1 µg/m³ -> 0 de 225436 (0.0 %)
+   [R9] A-B: concordancia en el solape: correlación PM2.5 = 1.0, PM10 = 1.0 (A desplazada a hora local) -> 352793
+   [R4] AIRE: horas con PM2.5 > PM10 (solo bandera, no se anulan) -> 285 de 927964 (0.031 %)
+== Fuente C (NASA POWER)
+   [R1] NASA: fecha-hora fuera del periodo de estudio (filas rechazadas) -> 35 de 884520 (0.004 %)
+   [R6] NASA: t2m: valor centinela -999.0 convertido a nulo -> 0 de 884520 (0.0 %)
+   [R6] NASA: rh2m: valor centinela -999.0 convertido a nulo -> 0 de 884520 (0.0 %)
+   [R6] NASA: ws10m: valor centinela -999.0 convertido a nulo -> 0 de 884520 (0.0 %)
+   [R6] NASA: prectotcorr: valor centinela -999.0 convertido a nulo -> 0 de 884520 (0.0 %)
+   [R6] NASA: ps: valor centinela -999.0 convertido a nulo -> 0 de 884520 (0.0 %)
+   [R5] NASA: rh2m: fuera de rango físico convertido a nulo -> 0 de 884520 (0.0 %)
+   [R5] NASA: ws10m: fuera de rango físico convertido a nulo -> 0 de 884520 (0.0 %)
+   [R5] NASA: prectotcorr: fuera de rango físico convertido a nulo -> 0 de 884520 (0.0 %)
+   [R2] NASA: filas duplicadas por estacion+fecha_hora (descartadas) -> 0
+   [R7] NASA: estaciones de NASA sin correspondencia en aire: [] -> 0
+   [R10] AIRE x NASA: horas de aire sin meteorología tras la unión -> 0 de 733518 (0.0 %)
+== Escritura en silver
+   escrito: hdfs://localhost:9000/datalake/silver/calidad_aire_horaria
+   escrito: hdfs://localhost:9000/datalake/silver/meteo_horaria
+   escrito: hdfs://localhost:9000/datalake/silver/aire_meteo_horaria
+   reporte de calidad: /home/fcam06/BigData_UPAO/BigData/evidencias/reporte_calidad_job1.csv
++-----------------------+-----------------------+--------+--------+-------+-----------------------+------+---------------+
+|estacion               |estacion_nombre        |latitud |longitud|altitud|distrito               |ubigeo|codigo_estacion|
++-----------------------+-----------------------+--------+--------+-------+-----------------------+------+---------------+
+|ATE                    |ATE                    |NULL    |NULL    |NULL   |NULL                   |NULL  |112192         |
+|CAMPO_DE_MARTE         |CAMPO_DE_MARTE         |-12.0705|-77.0432|117.0  |JESUS_MARIA            |150113|112194         |
+|CARABAYLLO             |CARABAYLLO             |-11.9022|-77.0336|179.0  |CARABAYLLO             |150106|111286         |
+|HUACHIPA               |HUACHIPA               |NULL    |NULL    |NULL   |NULL                   |NULL  |112266         |
+|PUENTE_PIEDRA          |PUENTE PIEDRA          |NULL    |NULL    |NULL   |NULL                   |NULL  |111287         |
+|SANTA_ANITA            |SANTA_ANITA            |-12.043 |-76.9714|253.0  |SANTA_ANITA            |150137|112208         |
+|SAN_BORJA              |SAN_BORJA              |-12.1086|-77.0077|128.0  |SAN_BORJA              |150130|112193         |
+|SAN_JUAN_DE_LURIGANCHO |SAN_JUAN_DE_LURIGANCHO |-11.9816|-76.9992|240.0  |SAN_JUAN_DE_LURIGANCHO |150132|112267         |
+|SAN_MARTIN_DE_PORRES   |SAN_MARTIN_DE_PORRES   |-12.0089|-77.0845|56.0   |SAN_MARTIN_DE_PORRES   |150135|112265         |
+|VILLA_MARIA_DEL_TRIUNFO|VILLA_MARIA_DEL_TRIUNFO|-12.1664|-76.92  |272.0  |VILLA_MARIA_DEL_TRIUNFO|150143|112233         |
++-----------------------+-----------------------+--------+--------+-------+-----------------------+------+---------------+
+
++------+------+
+|fuente| count|
++------+------+
+|     B|350254|
+|     A|577710|
++------+------+
+
+== job1_silver: 108.09 s

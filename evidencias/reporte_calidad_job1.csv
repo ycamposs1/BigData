@@ -1,0 +1,48 @@
+fuente,regla,descripcion,afectados,total,pct
+A,R1,fecha-hora inválida o fuera de 2010-01-01..2024-05-31 (filas rechazadas),0,577794,0.0
+A,R0,pm10: texto no numérico convertido a nulo,0,577794,0.0
+A,R3,pm10: valor negativo convertido a nulo,0,577794,0.0
+A,COMPLETITUD,pm10: horas sin dato en la fuente,196812,577794,34.063
+A,R0,pm2_5: texto no numérico convertido a nulo,0,577794,0.0
+A,R3,pm2_5: valor negativo convertido a nulo,0,577794,0.0
+A,COMPLETITUD,pm2_5: horas sin dato en la fuente,210203,577794,36.38
+A,R0,no2: texto no numérico convertido a nulo,0,577794,0.0
+A,R3,no2: valor negativo convertido a nulo,0,577794,0.0
+A,COMPLETITUD,no2: horas sin dato en la fuente,278602,577794,48.218
+A,R2,filas duplicadas por estacion+fecha_hora (descartadas),84,,
+B,R1,fecha-hora inválida o fuera de 2010-01-01..2024-05-31 (filas rechazadas),0,703056,0.0
+B,R0,pm10: texto no numérico convertido a nulo,0,703056,0.0
+B,R3,pm10: valor negativo convertido a nulo,0,703056,0.0
+B,COMPLETITUD,pm10: horas sin dato en la fuente,206372,703056,29.354
+B,R0,pm2_5: texto no numérico convertido a nulo,0,703056,0.0
+B,R3,pm2_5: valor negativo convertido a nulo,0,703056,0.0
+B,COMPLETITUD,pm2_5: horas sin dato en la fuente,363084,703056,51.644
+B,R0,no2: texto no numérico convertido a nulo,0,703056,0.0
+B,R3,no2: valor negativo convertido a nulo,0,703056,0.0
+B,COMPLETITUD,no2: horas sin dato en la fuente,351802,703056,50.039
+B,R0,so2: texto no numérico convertido a nulo,0,703056,0.0
+B,R3,so2: valor negativo convertido a nulo,0,703056,0.0
+B,COMPLETITUD,so2: horas sin dato en la fuente,408776,703056,58.143
+B,R0,o3: texto no numérico convertido a nulo,0,703056,0.0
+B,R3,o3: valor negativo convertido a nulo,0,703056,0.0
+B,COMPLETITUD,o3: horas sin dato en la fuente,354354,703056,50.402
+B,R0,co: texto no numérico convertido a nulo,0,703056,0.0
+B,R3,co: valor negativo convertido a nulo,0,703056,0.0
+B,COMPLETITUD,co: horas sin dato en la fuente,381705,703056,54.292
+B,R2,filas duplicadas por estacion+fecha_hora (descartadas),9,,
+A-B,R7,"estaciones solo en B, sin coordenadas en A: ['ATE', 'HUACHIPA', 'PUENTE_PIEDRA']",3,,
+A-B,R9,horas del solape con |PM2.5 A - PM2.5 B| > 1 µg/m³,0,225436,0.0
+A-B,R9,"concordancia en el solape: correlación PM2.5 = 1.0, PM10 = 1.0 (A desplazada a hora local)",352793,,
+AIRE,R4,"horas con PM2.5 > PM10 (solo bandera, no se anulan)",285,927964,0.031
+NASA,R1,fecha-hora fuera del periodo de estudio (filas rechazadas),35,884520,0.004
+NASA,R6,t2m: valor centinela -999.0 convertido a nulo,0,884520,0.0
+NASA,R6,rh2m: valor centinela -999.0 convertido a nulo,0,884520,0.0
+NASA,R6,ws10m: valor centinela -999.0 convertido a nulo,0,884520,0.0
+NASA,R6,prectotcorr: valor centinela -999.0 convertido a nulo,0,884520,0.0
+NASA,R6,ps: valor centinela -999.0 convertido a nulo,0,884520,0.0
+NASA,R5,rh2m: fuera de rango físico convertido a nulo,0,884520,0.0
+NASA,R5,ws10m: fuera de rango físico convertido a nulo,0,884520,0.0
+NASA,R5,prectotcorr: fuera de rango físico convertido a nulo,0,884520,0.0
+NASA,R2,filas duplicadas por estacion+fecha_hora (descartadas),0,,
+NASA,R7,estaciones de NASA sin correspondencia en aire: [],0,,
+AIRE x NASA,R10,horas de aire sin meteorología tras la unión,0,733518,0.0

@@ -1,0 +1,24 @@
+==========================================================================================
+ARCHIVO: /home/fcam06/BigData_UPAO/BigData/data/originales/docs/diccionario_datos_abiertos.xlsx  (0.0 MiB)
+
+--- Hoja: 'DiccionarioDatos' | filas: 25 | columnas: 6
+(None, None, None, None, None, None) 
+('Nombre del Dataset:', 'Monitoreo de los contaminantes del aire en Lima Metropolitana - [Servicio Nacional de Meteorología e Hidrología del Perú - SENAMHI]', None, None, None, None) 
+(None, None, None, None, None, None) 
+('Variable', 'Descripción', 'Tipo de dato', 'Tamaño', 'Recurso relacionado', 'Información Adicional ') 
+('ID', 'identificador unico de registro', 'Numérico', 10, None, None) 
+('ESTACION', 'Nombre de estación de monitoreo automático de la calidad del aire', 'Texto', 200, None, None) 
+('FECHA', 'Fecha en la que se realiza la medición en la estación de monitoreo automático de la calidad del aire', 'Numérico', 8, None, 'Formato: aaaammdd') 
+('HORA', 'Hora en la que se realiza la medición en la estación de monitoreo automático de la calidad del aire', 'Alfanumerico', 6, None, 'Formato: hhmmss') 
+==========================================================================================
+ARCHIVO: /home/fcam06/BigData_UPAO/BigData/data/originales/senamhi_repositorio/datos_horarios_contaminacion_lima.xlsx  (25.8 MiB)
+
+--- Hoja: 'datos_horarios_contaminacion_li' | filas: 703057 | columnas: 12
+('CODIGO ESTACION', 'ESTACION', 'ANO', 'MES', 'DIA', 'HORA', 'PM 10', 'PM 2.5', 'SO2', 'NO2', 'O3', 'CO') 
+(112192, 'ATE', 2010, 4, 1, 0, None, None, 39.8, None, None, None) 
+(112192, 'ATE', 2010, 4, 1, 1, 135.69, None, 29.9, 47.2, None, None) 
+(112192, 'ATE', 2010, 4, 1, 2, 135.84, None, 26.5, 44.1, None, None) 
+(112192, 'ATE', 2010, 4, 1, 3, 119.06, None, 25.9, 41.4, None, None) 
+(112192, 'ATE', 2010, 4, 1, 4, 104.95, None, 23.3, 40.5, None, None) 
+(112192, 'ATE', 2010, 4, 1, 5, 84.92, None, 22.5, 39, None, None) 
+(112192, 'ATE', 2010, 4, 1, 6, 88.03, None, 26.7, 44.8, None, None) 

@@ -1,0 +1,14 @@
+data/originales/**
+data/derivados/**
+!data/originales/**/
+!data/derivados/**/
+!data/**/.gitkeep
+*.parquet
+*.crc
+bigdata_env/
+__pycache__/
+.ipynb_checkpoints/
+spark-warehouse/
+metastore_db/
+derby.log
+.env
