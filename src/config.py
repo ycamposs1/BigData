@@ -29,6 +29,13 @@ A_SEP = ","
 A_ENCODING = "UTF-8"          # si las tildes salen rotas (Ã), usar "ISO-8859-1"
 OFFSET_UTC_H = 5              # A y NASA vienen en UTC; Lima es UTC-5 todo el año (sin horario de verano)
 
+# --- Fuente B: repositorio SENAMHI (XLSX -> CSV con src/01_xlsx_a_csv.py) ----------
+# B ya viene en hora local de Lima: NO se desplaza.
+# Si una estación se escribe distinto en A y en B (el Job 1 imprime la comparación),
+# se agrega aquí la equivalencia usando las claves normalizadas, por ejemplo:
+#   ALIAS_ESTACIONES = {"S_J_L": "SAN_JUAN_DE_LURIGANCHO"}
+ALIAS_ESTACIONES = {}
+
 # --- Fuente C: NASA POWER (API horaria) ---------------------------------------
 NASA_URL = "https://power.larc.nasa.gov/api/temporal/hourly/point"
 NASA_PARAMS = ["T2M", "RH2M", "WS10M", "PRECTOTCORR", "PS"]
