@@ -13,7 +13,7 @@ C  NASA POWER (API) ───────┘   (+ manifiesto SHA-256)      └ a
 ## Estructura del repositorio
 
 ```
-proyecto-pm25/
+BigData/
 ├── README.md                 esta guía
 ├── requirements.txt          librerías de Python con versión fija
 ├── bin/
@@ -72,13 +72,13 @@ Interfaces web para revisar y capturar evidencias: HDFS en `http://localhost:987
 ## 2. Crear la carpeta del proyecto
 
 ```bash
-mkdir -p ~/BigData_UPAO/proyecto-pm25     # -p crea también las carpetas intermedias si faltan
-cd ~/BigData_UPAO/proyecto-pm25            # entrar a la carpeta
+mkdir -p ~/BigData_UPAO/BigData     # -p crea también las carpetas intermedias si faltan
+cd ~/BigData_UPAO/BigData            # entrar a la carpeta
 pwd                                        # confirmar dónde estás
 ```
 
 Copia aquí el contenido de este repositorio (por ejemplo, descomprimiendo el .zip con
-`unzip ~/Descargas/proyecto-pm25.zip -d ~/BigData_UPAO/`) y revisa la estructura:
+`unzip ~/Descargas/proyecto-pm25.zip -d ~/BigData_UPAO/`)  esto tambien se puede hacer desde el gestor de archivos y revisa la estructura:
 
 ```bash
 sudo apt install tree -y
@@ -112,15 +112,15 @@ ssh -T git@github.com        # debe responder: "Hi <usuario>! You've successfull
 ```
 
 **3.3. Crear el repositorio (solo el coordinador):** en GitHub, *New repository*, nombre
-`proyecto-pm25`, **sin** marcar README ni .gitignore (ya existen aquí). Luego, en la VM:
+`BigData`, **sin** marcar README ni .gitignore (ya existen aquí). Luego, en la VM:
 
 ```bash
-cd ~/BigData_UPAO/proyecto-pm25
+cd ~/BigData_UPAO/BigData
 git init -b main
 git add .
 git status                   # verifica que NO aparezca ningún archivo de data/originales ni data/derivados
 git commit -m "Estructura inicial del pipeline"
-git remote add origin git@github.com:USUARIO/proyecto-pm25.git
+git remote add origin git@github.com:USUARIO/BigData.git
 git push -u origin main
 ```
 
@@ -129,7 +129,7 @@ clona el repositorio en su VM y trabaja con su propia cuenta:
 
 ```bash
 cd ~/BigData_UPAO
-git clone git@github.com:USUARIO/proyecto-pm25.git
+git clone git@github.com:USUARIO/BigData.git
 ```
 
 **3.5. Ciclo de trabajo diario:**
